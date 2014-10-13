@@ -6,11 +6,20 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.3.1');
-  api.addFiles('yogiben:pretty-emails.js');
+
+  api.use('coffeescript');
+  api.use('email');
+  api.use('cmather:handlebars-server');
+  
+  api.addFiles(
+    [
+      'lib/server/pretty-emails.coffee',
+      'lib/templates/call-to-action.handlebars'
+    ], 
+    'server');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('yogiben:pretty-emails');
-  api.addFiles('yogiben:pretty-emails-tests.js');
 });
