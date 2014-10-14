@@ -4,7 +4,7 @@
 	<!-- NAME: 1 COLUMN -->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{BillsConfig.siteName}}</title>
+	<title>{{title}}</title>
 	
 	<style type="text/css">
 		body,#bodyTable,#bodyCell{
@@ -563,7 +563,7 @@
 																
 																<td valign="top" class="mcnTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;">
 																	
-																	Your bill has been paid
+																	{{title}}
 																</td>
 															</tr>
 														</tbody></table>
@@ -629,11 +629,11 @@
 																
 																<td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 																	
-																	<h2>{{name}}, your bill has been paid</h2>
+																	<h2>{{heading}}</h2>
 
-																	<h3>We just made a bank transfer on your behalf</h3>
+																	<h3>{{headingSmall}}</h3>
 
-																	<p>It typically takes 1-3 days in Germany and 3-5 day in Europe.</p>
+																	<p>{{message}}</p>
 
 																</td>
 															</tr>
@@ -650,7 +650,7 @@
 														<tbody>
 															<tr>
 																<td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 16px;">
-																	<a class="mcnButton " title="See your bill" href="http://{{BillsConfig.siteUrl}}{{doc.link}}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">See your bill</a>
+																	<a class="mcnButton " title="See your bill" href="{{buttonUrl}}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{buttonText}}</a>
 																</td>
 															</tr>
 														</tbody>
@@ -677,14 +677,14 @@
 																						
 																						<tbody><tr>
 																							<td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:10px; padding-bottom:5px;">
-																								<a href="http://www.facebook.com/{{BillsConfig.facebook}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+																								<a href="http://www.facebook.com/{{facebook}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
 																							</td>
 																						</tr>
 																						
 																						
 																						<tr>
 																							<td align="center" valign="top" class="mcnFollowTextContent" style="padding-right:10px; padding-bottom:9px;">
-																								<a href="http://www.facebook.com/{{BillsConfig.facebook}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Facebook</a>
+																								<a href="http://www.facebook.com/{{facebook}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Facebook</a>
 																							</td>
 																						</tr>
 																						
@@ -701,14 +701,14 @@
 						    			
 						    			<tbody><tr>
 						    				<td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:10px; padding-bottom:5px;">
-						    					<a href="http://www.twitter.com/{{BillsConfig.twitter}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+						    					<a href="http://www.twitter.com/{{twitter}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
 						    				</td>
 						    			</tr>
 						    			
 						    			
 						    			<tr>
 						    				<td align="center" valign="top" class="mcnFollowTextContent" style="padding-right:10px; padding-bottom:9px;">
-						    					<a href="http://www.twitter.com/{{BillsConfig.twitter}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Twitter</a>
+						    					<a href="http://www.twitter.com/{{twitter}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Twitter</a>
 						    				</td>
 						    			</tr>
 						    			
@@ -725,14 +725,14 @@
 						    			
 						    			<tbody><tr>
 						    				<td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:0; padding-bottom:5px;">
-						    					<a href="{{BillsConfig.siteUrl}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+						    					<a href="{{siteUrl}}" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
 						    				</td>
 						    			</tr>
 						    			
 						    			
 						    			<tr>
 						    				<td align="center" valign="top" class="mcnFollowTextContent" style="padding-right:0; padding-bottom:9px;">
-						    					<a href="{{BillsConfig.siteUrl}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Website</a>
+						    					<a href="{{siteUrl}}" target="_blank" style="color: #606060;font-family: Arial;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;">Website</a>
 						    				</td>
 						    			</tr>
 						    			
@@ -778,7 +778,7 @@
 										
 										<td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 											
-											<em>You are getting this message because you signed up to {{BillsConfig.siteName}}, a product managed by <a href="http://bitcoinsberlin.com" target="_blank">BitcoinsBerlin</a>. Bits &amp; Coins Consulting UG. Jessnerstrasse 18, 10247 Berlin</em><em>.&nbsp;+4930 2694 8930.&nbsp;<a href="mailto:support@{{siteUrl}}" target="_blank">support@{{ssiteName}}</a>.</em>
+											<em>{{{footer}}}</em>
 										</td>
 									</tr>
 								</tbody></table>

@@ -9,12 +9,15 @@ Package.onUse(function(api) {
 
   api.use('coffeescript');
   api.use('email');
+  api.use('underscore');
   api.use('cmather:handlebars-server');
   
   api.addFiles(
     [
       'lib/server/pretty-emails.coffee',
-      'lib/templates/call-to-action.handlebars'
+      'lib/templates/shared/footer.handlebars',
+      'lib/templates/call-to-action.handlebars',
+      'lib/templates/activation.handlebars'
     ], 
     'server');
 });
