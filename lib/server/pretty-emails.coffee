@@ -11,7 +11,7 @@ OriginalHandlebars.registerHelper 'footer', ->
     buttonBgColor: '#007FFF'
   defaults:
     'activation':
-      title: 'Activate your account'
+      subject: 'Activate your account'
       heading: 'Just one more step...'
       message: 'Click the big button below to activate your account'
       buttonText: 'Activate account'
