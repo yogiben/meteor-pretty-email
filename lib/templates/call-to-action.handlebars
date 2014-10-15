@@ -95,9 +95,9 @@
 	@style heading 1
 	*/
 	h1{
-		/*@editable*/color:#606060 !important;
+		/*@editable*/color:{{style.textColor}} !important;
 		display:block;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:40px;
 		/*@editable*/font-style:normal;
 		/*@editable*/font-weight:bold;
@@ -113,9 +113,9 @@
 	@style heading 2
 	*/
 	h2{
-		/*@editable*/color:#404040 !important;
+		/*@editable*/color:{{style.textColor}} !important;
 		display:block;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:26px;
 		/*@editable*/font-style:normal;
 		/*@editable*/font-weight:bold;
@@ -131,9 +131,9 @@
 	@style heading 3
 	*/
 	h3{
-		/*@editable*/color:#606060 !important;
+		/*@editable*/color:{{style.textColor}} !important;
 		display:block;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:18px;
 		/*@editable*/font-style:normal;
 		/*@editable*/font-weight:bold;
@@ -149,9 +149,9 @@
 	@style heading 4
 	*/
 	h4{
-		/*@editable*/color:#808080 !important;
+		/*@editable*/color:{{style.textColor}} !important;
 		display:block;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:16px;
 		/*@editable*/font-style:normal;
 		/*@editable*/font-weight:bold;
@@ -176,8 +176,8 @@
 	@tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
 	*/
 	.preheaderContainer .mcnTextContent,.preheaderContainer .mcnTextContent p{
-		/*@editable*/color:#606060;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/color:{{style.textColor}};
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:11px;
 		/*@editable*/line-height:125%;
 		/*@editable*/text-align:left;
@@ -188,7 +188,7 @@
 	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
 	*/
 	.preheaderContainer .mcnTextContent a{
-		/*@editable*/color:#606060;
+		/*@editable*/color:{{style.textColor}};
 		/*@editable*/font-weight:normal;
 		/*@editable*/text-decoration:underline;
 	}
@@ -208,8 +208,8 @@
 	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
 	*/
 	.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
-		/*@editable*/color:#606060;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/color:{{style.textColor}};
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:15px;
 		/*@editable*/line-height:150%;
 		/*@editable*/text-align:left;
@@ -220,7 +220,7 @@
 	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
 	*/
 	.headerContainer .mcnTextContent a{
-		/*@editable*/color:#6DC6DD;
+		/*@editable*/color:{{style.textColor}};
 		/*@editable*/font-weight:normal;
 		/*@editable*/text-decoration:underline;
 	}
@@ -240,8 +240,8 @@
 	@tip Set the styling for your email's body text. Choose a size and color that is easy to read.
 	*/
 	.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
-		/*@editable*/color:#606060;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/color:{{style.textColor}};
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:15px;
 		/*@editable*/line-height:150%;
 		/*@editable*/text-align:left;
@@ -252,7 +252,7 @@
 	@tip Set the styling for your email's body links. Choose a color that helps them stand out from your text.
 	*/
 	.bodyContainer .mcnTextContent a{
-		/*@editable*/color:#6DC6DD;
+		/*@editable*/color:{{style.textColor}};
 		/*@editable*/font-weight:normal;
 		/*@editable*/text-decoration:underline;
 	}
@@ -272,8 +272,8 @@
 	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
 	*/
 	.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
-		/*@editable*/color:#606060;
-		/*@editable*/font-family:Helvetica;
+		/*@editable*/color:{{style.textColor}};
+		/*@editable*/font-family:{{style.fontFamily}};
 		/*@editable*/font-size:11px;
 		/*@editable*/line-height:125%;
 		/*@editable*/text-align:left;
@@ -284,7 +284,7 @@
 	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
 	*/
 	.footerContainer .mcnTextContent a{
-		/*@editable*/color:#606060;
+		/*@editable*/color:{{style.textColor}};
 		/*@editable*/font-weight:normal;
 		/*@editable*/text-decoration:underline;
 	}
@@ -551,7 +551,7 @@
 						<tr>
 							<td align="center" valign="top">
 								<!-- BEGIN PREHEADER // -->
-								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templatePreheader">
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templatePreheader" style="{{style.preheader}}">
 									<tr>
 										<td valign="top" class="preheaderContainer" style="padding-top:9px;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
 											<tbody class="mcnTextBlockOuter">
@@ -590,7 +590,7 @@
 						<tr>
 							<td align="center" valign="top">
 								<!-- BEGIN HEADER // -->
-								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader" style="{{style.header}}">
 									<tr>
 										<td valign="top" class="headerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock">
 											<tbody class="mcnImageBlockOuter">
@@ -617,7 +617,7 @@
 						<tr>
 							<td align="center" valign="top">
 								<!-- BEGIN BODY // -->
-								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody" style="{{style.body}}">
 									<tr>
 										<td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
 											<tbody class="mcnTextBlockOuter">
@@ -646,11 +646,11 @@
 										<tbody class="mcnButtonBlockOuter">
 											<tr>
 												<td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-													<table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #007FFF;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: #3E87D5;">
+													<table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid {{style.buttonBgColor}};border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: {{style.buttonBgColor}};">
 														<tbody>
 															<tr>
 																<td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 16px;">
-																	<a class="mcnButton " title="See your bill" href="{{buttonUrl}}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">{{buttonText}}</a>
+																	<a class="mcnButton " title="See your bill" href="{{buttonUrl}}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: {{style.buttonColor}};">{{buttonText}}</a>
 																</td>
 															</tr>
 														</tbody>
@@ -766,7 +766,7 @@
 <tr>
 	<td align="center" valign="top">
 		<!-- BEGIN FOOTER // -->
-		<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
+		<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter" style="{{style.footer}}">
 			<tr>
 				<td valign="top" class="footerContainer" style="padding-bottom:9px;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock">
 					<tbody class="mcnTextBlockOuter">
