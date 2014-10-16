@@ -1,6 +1,14 @@
 {
   "dependencies": [
     [
+      "accounts-base",
+      "1.1.1"
+    ],
+    [
+      "accounts-password",
+      "1.0.2"
+    ],
+    [
       "application-configuration",
       "1.0.2"
     ],
@@ -61,6 +69,10 @@
       "1.0.0"
     ],
     [
+      "localstorage",
+      "1.0.0"
+    ],
+    [
       "logging",
       "1.0.3"
     ],
@@ -77,6 +89,10 @@
       "1.0.6"
     ],
     [
+      "npm-bcrypt",
+      "0.7.7"
+    ],
+    [
       "ordered-dict",
       "1.0.0"
     ],
@@ -86,6 +102,18 @@
     ],
     [
       "retry",
+      "1.0.0"
+    ],
+    [
+      "service-configuration",
+      "1.0.1"
+    ],
+    [
+      "sha",
+      "1.0.0"
+    ],
+    [
+      "srp",
       "1.0.0"
     ],
     [

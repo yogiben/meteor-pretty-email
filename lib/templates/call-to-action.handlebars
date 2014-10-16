@@ -658,7 +658,9 @@
 												</td>
 											</tr>
 										</tbody>
-									</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock">
+									</table>
+                  {{#if showFollowBlock}}
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock">
 									<tbody class="mcnFollowBlockOuter">
 										<tr>
 											<td align="center" valign="top" style="padding:9px" class="mcnFollowBlockInner">
@@ -672,7 +674,7 @@
 																			<tbody><tr>
 																				<td valign="top">
 																					
-																					
+																				  {{#if facebook}}	
 																					<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked">
 																						
 																						<tbody><tr>
@@ -689,6 +691,7 @@
 																						</tr>
 																						
 																					</tbody></table>
+                                          {{/if}}
 																					
 																					
 								<!--[if gte mso 6]>
@@ -696,7 +699,7 @@
 						    	<td align="left" valign="top">
 						    		<![endif]-->
 						    		
-						    		
+						    		{{#if twitter}}
 						    		<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked">
 						    			
 						    			<tbody><tr>
@@ -713,6 +716,7 @@
 						    			</tr>
 						    			
 						    		</tbody></table>
+                    {{/if}}
 						    		
 						    		
 								<!--[if gte mso 6]>
@@ -720,7 +724,7 @@
 						    	<td align="left" valign="top">
 						    		<![endif]-->
 						    		
-						    		
+						    		{{#if siteUrl}}
 						    		<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked">
 						    			
 						    			<tbody><tr>
@@ -737,6 +741,7 @@
 						    			</tr>
 						    			
 						    		</tbody></table>
+                    {{/if}}
 						    		
 						    		
 								<!--[if gte mso 6]>
@@ -747,6 +752,7 @@
 						    	</td>
 						    </tr>
 						</tbody></table>
+            {{/if}}
 					</td>
 				</tr>
 			</tbody></table>
@@ -778,7 +784,9 @@
 										
 										<td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 											
-											<em>{{{footer}}}</em>
+											{{#if showFooter}}
+                        {{{footer}}}
+                      {{/if}}
 										</td>
 									</tr>
 								</tbody></table>
