@@ -15,6 +15,7 @@ e.g.
 
 ```
 PrettyEmail.options =
+  from: 'support@mycompany.com'
   logoUrl: 'http://mycompany.com/logo.png'
   companyName: 'myCompany'
   companyUrl: 'http://mycompany.com'
@@ -24,13 +25,24 @@ PrettyEmail.options =
   siteName: 'mycompany'
 ```
 
-3) Send your email
+3) Send your emails
 
 ```
-PrettyEmail.send 'activation',
-  from: 'support@mycompany.com'
+Accounts.sendVerificationEmail Meteor.userId()
+Accounts.sendResetPasswordEmail Meteor.userId()
+Accounts.sendEnrollmentEmail Meteor.userId()
+```
+
+or using template
+
+```
+PrettyEmail.send 'call-to-action',
   to: 'myuser@myuser.com'
-  userName: 'Michal'
+  subject: 'You got new message'
+  heading: 'Your friend sent you a message'
+  message: 'Click the button below to read the message'
+  buttonText: 'Read message'
+  buttonUrl: 'http://mycompany.com/messages/2314'
 ```
 
 ### Templates ###
@@ -59,25 +71,27 @@ PrettyEmail.send 'call-to-action', options
 
 ``buttonUrl`` - required. e.g. 'http://mycompany.com/bills/12341234'
 
-#### Activation ####
+### Global options ###
 
-```
-PrettyEmail.send 'activation', options
-```
+You can set your options globally with ``PrettyEmail.options`` object.
 
-**Options**
+``showFooter`` - default true
 
-``from`` - required
+``showFollowBlock`` - default true
 
-``to`` - required
+``facebook`` ``twitter`` ``googlePlus`` ``instagram`` ``pinterest`` ``youtube`` ``linkedin`` ``tumblr`` ``website`` ``email`` - links to specific social medias
 
-``subject`` - optional. Defaulted to 'Activate your account'
+``companyName`` - name of your company (must be specified otherwise footer won't be rendered)
 
-``heading`` - optional. Primary heading. Defaulted to 'Just one more step...'
+``companyUrl`` - url of your company website
 
-``message`` - optional. Message to the user. Defaulted to 'Click the big button below to activate your account'
+``companyEmail`` - email of your company
 
-``buttonText`` - optional. Defaulted to 'Activate account'
+``companyAddress`` - address of your company
+
+``companyTelephone`` - telephone number of your company
+
+``siteName`` - name of your website
 
 ### Custom style ###
 

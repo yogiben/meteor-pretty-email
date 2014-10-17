@@ -1,12 +1,13 @@
 OriginalHandlebars.registerHelper 'footer', ->
   options = _.extend(@, PrettyEmail.options)
-  Handlebars.templates.footer(options)
+  if options.companyName
+    Handlebars.templates.footer(options)
 
 @PrettyEmail =
   options: {}
   style:
     fontFamily: 'Helvetica'
-    textColor: '#606060'
+    fontColor: '#606060'
     buttonColor: '#FFFFFF'
     buttonBgColor: '#007FFF'
 
@@ -40,3 +41,12 @@ Accounts.emailTemplates.resetPassword.html = (user, resetPasswordUrl) ->
     message: 'Click the big button below to reset your password'
     buttonText: 'Reset password'
     buttonUrl: resetPasswordUrl
+
+Accounts.emailTemplates.enrollAccount.subject = ->
+  'An account has been created for you'
+Accounts.emailTemplates.enrollAccount.html = (user, enrollAccountUrl) ->
+  PrettyEmail.render 'call-to-action',
+    subject: Accounts.emailTemplates.enrollAccount.subject(user)
+    heading: 'To start using service, simply click the button below'
+    buttonText: 'Change password'
+    buttonUrl: enrollAccountUrl
