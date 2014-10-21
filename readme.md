@@ -73,7 +73,7 @@ PrettyEmail.send 'call-to-action', options
 
 ### Global options ###
 
-You can set your options globally with ``PrettyEmail.options`` object.
+You can set your options globally with ``PrettyEmail.options`` object. ``PrettyEmail.send`` will merge this object with options argument so you can put here some other values (e.g. ``from`` ``to`` ``subject``).
 
 ``showFooter`` - default true
 

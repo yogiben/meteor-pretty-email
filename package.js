@@ -1,6 +1,6 @@
 Package.describe({
-  summary: " \* Fill me in! *\ ",
-  version: "1.0.0",
+  summary: "Send pretty emails",
+  version: "0.0.1",
   git: " \* Fill me in! *\ "
 });
 
