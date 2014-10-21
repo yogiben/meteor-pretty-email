@@ -7,7 +7,7 @@ OriginalHandlebars.registerHelper 'footer', ->
   options: {}
   style:
     fontFamily: 'Helvetica'
-    fontColor: '#606060'
+    textColor: '#606060'
     buttonColor: '#FFFFFF'
     buttonBgColor: '#007FFF'
 
