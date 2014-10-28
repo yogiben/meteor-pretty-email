@@ -3,7 +3,7 @@ Send pretty emails
 
 Pretty email templates for meteor.
 
-`meteor add yogiben:pretty-emails`
+`meteor add yogiben:pretty-email`
 
 ### Usage ###
 
