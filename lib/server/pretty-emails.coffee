@@ -9,7 +9,7 @@ OriginalHandlebars.registerHelper 'footer', ->
     fontFamily: 'Helvetica'
     textColor: '#606060'
     buttonColor: '#FFFFFF'
-    buttonBgColor: '#007FFF'
+    buttonBgColor: '#3071a9'
 
   send: (template, options) ->
     Email.send
