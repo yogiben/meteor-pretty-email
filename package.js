@@ -1,11 +1,11 @@
 Package.describe({
   summary: "Send pretty emails",
   version: "0.0.1",
-  git: " \* Fill me in! *\ "
+  git: "https://github.com/yogiben/meteor-pretty-email"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.3.1');
+  api.versionsFrom('METEOR@1.0');
 
   api.use('coffeescript');
   api.use('email');
