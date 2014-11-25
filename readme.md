@@ -1,7 +1,9 @@
 Send pretty emails
 ==================
 
-Pretty email templates for meteor.
+Pretty emails for meteor: custom content & accounts.
+
+![alt tag](https://raw.githubusercontent.com/yogiben/meteor-pretty-email/master/readme/meteor-pretty-email.png)
 
 `meteor add yogiben:pretty-email`
 
