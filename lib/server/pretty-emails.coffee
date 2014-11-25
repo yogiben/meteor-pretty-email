@@ -50,3 +50,7 @@ Accounts.emailTemplates.enrollAccount.html = (user, enrollAccountUrl) ->
     heading: 'To start using service, simply click the button below'
     buttonText: 'Change password'
     buttonUrl: enrollAccountUrl
+
+Meteor.startup ->
+  if PrettyEmail.options.from
+    Accounts.emailTemplates.from = PrettyEmail.options.from

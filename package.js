@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Send pretty emails",
-  version: "0.0.2",
+  version: "0.0.3",
   git: "https://github.com/yogiben/meteor-pretty-email"
 });
 
