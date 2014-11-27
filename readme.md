@@ -106,3 +106,15 @@ PrettyEmail.style =
   buttonColor: '#FFFFFF'
   buttonBgColor: '#007FFF'
 ```
+
+### Customizing Accounts emails ###
+You can change the text in the verification email etc.
+
+e.g.
+
+```
+PrettyEmail.defaults.verifyEmail =
+  heading: 'Need to activate your account'
+  buttonText: 'Activate'
+  ...
+  ```
