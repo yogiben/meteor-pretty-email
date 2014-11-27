@@ -5,6 +5,19 @@ OriginalHandlebars.registerHelper 'footer', ->
 
 @PrettyEmail =
   options: {}
+  defaults:
+    verifyEmail:
+      heading: 'Just one more step...'
+      message: 'Click on the big button below to activate your account'
+      buttonText: 'Activate account'
+    resetPassword:
+      heading: 'Reset your password'
+      message: 'Click the big button below to reset your password'
+      buttonText: 'Reset password'
+    enrollAccount:
+      heading: 'To start using service, simply click the button below'
+      buttonText: 'Change password'
+
   style:
     fontFamily: 'Helvetica'
     fontColor: '#606060'
@@ -25,31 +38,26 @@ OriginalHandlebars.registerHelper 'footer', ->
 Accounts.emailTemplates.verifyEmail.subject = ->
   'Activate your account'
 Accounts.emailTemplates.verifyEmail.html = (user, verifyEmailUrl) ->
-  PrettyEmail.render 'call-to-action',
+  options = _.extend {}, PrettyEmail.defaults.verifyEmail,
     subject: Accounts.emailTemplates.verifyEmail.subject(user)
-    heading: 'Just one more step...'
-    message: 'Click on the big button below to activate your account'
-    buttonText: 'Activate account'
     buttonUrl: verifyEmailUrl
+  PrettyEmail.render 'call-to-action', options
 
 Accounts.emailTemplates.resetPassword.subject = ->
   'Reset your password'
 Accounts.emailTemplates.resetPassword.html = (user, resetPasswordUrl) ->
-  PrettyEmail.render 'call-to-action',
+  options = _.extend {}, PrettyEmail.defaults.resetPassword,
     subject: Accounts.emailTemplates.resetPassword.subject(user)
-    heading: 'Reset your password'
-    message: 'Click the big button below to reset your password'
-    buttonText: 'Reset password'
     buttonUrl: resetPasswordUrl
+  PrettyEmail.render 'call-to-action', options
 
 Accounts.emailTemplates.enrollAccount.subject = ->
   'An account has been created for you'
 Accounts.emailTemplates.enrollAccount.html = (user, enrollAccountUrl) ->
-  PrettyEmail.render 'call-to-action',
+  options = _.extend {}, PrettyEmail.defaults.enrollAccount,
     subject: Accounts.emailTemplates.enrollAccount.subject(user)
-    heading: 'To start using service, simply click the button below'
-    buttonText: 'Change password'
     buttonUrl: enrollAccountUrl
+  PrettyEmail.render 'call-to-action', options
 
 Meteor.startup ->
   if PrettyEmail.options.from
