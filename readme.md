@@ -1,8 +1,6 @@
 Send pretty emails
 ==================
 
-Pretty emails for meteor: custom content & accounts.
-
 `meteor add yogiben:pretty-email`
 
 ### What this package does ###
