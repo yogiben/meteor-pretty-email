@@ -3,9 +3,14 @@ Send pretty emails
 
 Pretty emails for meteor: custom content & accounts.
 
+`meteor add yogiben:pretty-email`
+
+### What this package does ###
+1. Replaces boring default Meteor emails
+2. Easily send pretty emails with call to action buttons
+
 ![alt tag](https://raw.githubusercontent.com/yogiben/meteor-pretty-email/master/readme/meteor-pretty-email.png)
 
-`meteor add yogiben:pretty-email`
 
 ### Usage ###
 
