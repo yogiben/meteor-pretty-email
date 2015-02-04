@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use('email');
   api.use('underscore');
   api.use('accounts-password');
-  api.use('cmather:handlebars-server@0.2.0');
+  api.use('cmather:handlebars-server@2.0.0');
   
   api.addFiles(
     [

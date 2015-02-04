@@ -33,7 +33,14 @@ OriginalHandlebars.registerHelper 'footer', ->
   render: (template, options) ->
     options.style = @style
     options = _.extend(@options, options)
-    Handlebars.templates[template](options)
+
+    if typeof template == 'string'
+      template = Handlebars.templates[template]
+
+    if typeof template == 'function'
+      template(options)
+    else
+      throw new Error "PrettyEmail can't render template. Pass template name or handlebars function."
 
 Accounts.emailTemplates.verifyEmail.subject = ->
   'Activate your account'
