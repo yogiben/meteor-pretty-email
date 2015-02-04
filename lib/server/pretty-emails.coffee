@@ -25,6 +25,8 @@ OriginalHandlebars.registerHelper 'footer', ->
     buttonBgColor: '#3071a9'
 
   send: (template, options) ->
+    options = _.extend {}, @options, options
+    
     Email.send
       from: options.from
       to: options.to
@@ -32,7 +34,7 @@ OriginalHandlebars.registerHelper 'footer', ->
       html: @render template, options
   render: (template, options) ->
     options.style = @style
-    options = _.extend(@options, options)
+    options = _.extend {}, @options, options
 
     if typeof template == 'string'
       template = Handlebars.templates[template]
