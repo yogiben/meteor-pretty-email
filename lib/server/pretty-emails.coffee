@@ -3,7 +3,7 @@ OriginalHandlebars.registerHelper 'footer', ->
   if options.companyName
     Handlebars.templates.footer(options)
 
-@PrettyEmail =
+PrettyEmail =
   options: {}
   defaults:
     verifyEmail:
@@ -26,7 +26,7 @@ OriginalHandlebars.registerHelper 'footer', ->
 
   send: (template, options) ->
     options = _.extend {}, @options, options
-    
+
     Email.send
       from: options.from
       to: options.to
