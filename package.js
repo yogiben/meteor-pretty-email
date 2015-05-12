@@ -18,6 +18,7 @@ Package.onUse(function(api) {
       'lib/server/pretty-emails.coffee',
       'lib/templates/shared/footer.handlebars',
       'lib/templates/call-to-action.handlebars',
+      'lib/templates/basic.handlebars'
     ], 
     'server');
 });
