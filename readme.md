@@ -76,6 +76,24 @@ PrettyEmail.send 'call-to-action', options
 
 ``buttonUrl`` - required. e.g. 'http://mycompany.com/bills/12341234'
 
+#### Basic ####
+
+Similar to call-to-action template except that it doesn't have a button and text is not centered.
+
+**Options**
+
+``from`` - required
+
+``to`` - required
+
+``subject`` - required
+
+``heading`` - required. Primary heading
+
+``headingSmall`` - optional. Secondary heading
+
+``message`` - required. Message to the user (e.g. 'Your bill has been paid')
+
 ### Global options ###
 
 You can set your options globally with ``PrettyEmail.options`` object. ``PrettyEmail.send`` will merge this object with options argument so you can put here some other values (e.g. ``from`` ``to`` ``subject``).
