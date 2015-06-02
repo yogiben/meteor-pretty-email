@@ -54,6 +54,8 @@ PrettyEmail.send 'call-to-action',
 
 #### Call to action ####
 
+![call-to-action](readme/call-to-action.png)
+
 ```
 PrettyEmail.send 'call-to-action', options
 ```
@@ -77,6 +79,8 @@ PrettyEmail.send 'call-to-action', options
 ``buttonUrl`` - required. e.g. 'http://mycompany.com/bills/12341234'
 
 #### Basic ####
+
+![basic](readme/basic.png)
 
 Similar to call-to-action template except that it doesn't have a button and text is not centered.
 
