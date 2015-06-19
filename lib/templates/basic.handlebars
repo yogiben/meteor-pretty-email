@@ -481,7 +481,7 @@
 
 <h3 style="text-align: left;margin: 0;padding: 0;display: block;font-family: {{style.fontFamily}};font-size: 18px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -.5px;color: {{style.fontColor}} !important;">{{{headingSmall}}}</h3>
 
-<p style="text-align: left;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;"><span style="line-height:1.6em; text-align:left">{{{message}}}</span></p>
+{{#eachLine}}<p style="text-align: left;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;"><span style="line-height:1.6em; text-align:left">{{{this}}}</span></p>{{/eachLine}}
 
                         </td>
                     </tr>
