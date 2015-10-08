@@ -1,7 +1,7 @@
 Package.describe({
   name: "yogiben:pretty-email",
   summary: "Send pretty emails",
-  version: "0.0.6",
+  version: "0.0.7",
   git: "https://github.com/yogiben/meteor-pretty-email"
 });
 
@@ -27,9 +27,4 @@ Package.onUse(function(api) {
     'server');
 
   api.export('PrettyEmail', 'server');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('yogiben:pretty-email');
 });
