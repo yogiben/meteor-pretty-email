@@ -49,25 +49,27 @@ PrettyEmail =
     else
       throw new Error "PrettyEmail can't render template. Pass template name or handlebars function."
 
-Accounts.emailTemplates.verifyEmail.subject = ->
+Accounts = Package['accounts-base']?.Accounts
+
+Accounts?.emailTemplates?.verifyEmail.subject = ->
   'Activate your account'
-Accounts.emailTemplates.verifyEmail.html = (user, verifyEmailUrl) ->
+Accounts?.emailTemplates?.verifyEmail.html = (user, verifyEmailUrl) ->
   options = _.extend {}, PrettyEmail.defaults.verifyEmail,
     subject: Accounts.emailTemplates.verifyEmail.subject(user)
     buttonUrl: verifyEmailUrl
   PrettyEmail.render 'call-to-action', options
 
-Accounts.emailTemplates.resetPassword.subject = ->
+Accounts?.emailTemplates?.resetPassword.subject = ->
   'Reset your password'
-Accounts.emailTemplates.resetPassword.html = (user, resetPasswordUrl) ->
+Accounts?.emailTemplates?.resetPassword.html = (user, resetPasswordUrl) ->
   options = _.extend {}, PrettyEmail.defaults.resetPassword,
     subject: Accounts.emailTemplates.resetPassword.subject(user)
     buttonUrl: resetPasswordUrl
   PrettyEmail.render 'call-to-action', options
 
-Accounts.emailTemplates.enrollAccount.subject = ->
+Accounts?.emailTemplates?.enrollAccount.subject = ->
   'An account has been created for you'
-Accounts.emailTemplates.enrollAccount.html = (user, enrollAccountUrl) ->
+Accounts?.emailTemplates?.enrollAccount.html = (user, enrollAccountUrl) ->
   options = _.extend {}, PrettyEmail.defaults.enrollAccount,
     subject: Accounts.emailTemplates.enrollAccount.subject(user)
     buttonUrl: enrollAccountUrl
