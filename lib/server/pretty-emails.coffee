@@ -3,8 +3,8 @@ OriginalHandlebars.registerHelper 'footer', ->
   if options.companyName
     Handlebars.templates.footer(options)
 
-OriginalHandlebars.registerHelper 'eachLine', (options) ->
-  _.reduce @message?.split('\n'), (result, content) ->
+OriginalHandlebars.registerHelper 'eachLine', (content, options) ->
+  _.reduce content?.split('\n'), (result, content) ->
     result + options.fn(content)
   , ''
 
