@@ -48,6 +48,7 @@ PrettyEmail.send 'call-to-action',
   message: 'Click the button below to read the message'
   buttonText: 'Read message'
   buttonUrl: 'http://mycompany.com/messages/2314'
+  messageAfterButton: "I come after the button!"
 ```
 
 ### Templates ###
