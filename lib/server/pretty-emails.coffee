@@ -28,6 +28,8 @@ PrettyEmail =
     fontColor: '#606060'
     buttonColor: '#FFFFFF'
     buttonBgColor: '#3071a9'
+    logoWidth:  "129"
+    logoMaxWidth: "258px"
 
   send: (template, options) ->
     options = _.extend {}, @options, options
@@ -73,7 +75,7 @@ Accounts?.emailTemplates?.enrollAccount.html = (user, enrollAccountUrl) ->
   options = _.extend {}, PrettyEmail.defaults.enrollAccount,
     subject: Accounts.emailTemplates.enrollAccount.subject(user)
     buttonUrl: enrollAccountUrl
-  PrettyEmail.render 'call-to-action', options
+  PrettyEmail.render 'call-stto-action', options
 
 Meteor.startup ->
   if PrettyEmail.options.from
