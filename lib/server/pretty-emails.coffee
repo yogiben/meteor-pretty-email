@@ -75,7 +75,7 @@ Accounts?.emailTemplates?.enrollAccount.html = (user, enrollAccountUrl) ->
   options = _.extend {}, PrettyEmail.defaults.enrollAccount,
     subject: Accounts.emailTemplates.enrollAccount.subject(user)
     buttonUrl: enrollAccountUrl
-  PrettyEmail.render 'call-stto-action', options
+  PrettyEmail.render 'call-to-action', options
 
 Meteor.startup ->
   if PrettyEmail.options.from
