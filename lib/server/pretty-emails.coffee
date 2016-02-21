@@ -28,6 +28,8 @@ PrettyEmail =
     fontColor: '#606060'
     buttonColor: '#FFFFFF'
     buttonBgColor: '#3071a9'
+    logoWidth:  "129"
+    logoMaxWidth: "258px"
 
   send: (template, options) ->
     options = _.extend {}, @options, options

@@ -131,6 +131,8 @@ PrettyEmail.style =
   textColor: '#606060'
   buttonColor: '#FFFFFF'
   buttonBgColor: '#007FFF'
+  logoWidth: '129'
+  logoMaxWidth: '258px'
 ```
 
 ### Customizing Accounts emails ###
