@@ -121,6 +121,12 @@ You can set your options globally with ``PrettyEmail.options`` object. ``PrettyE
 
 ``siteName`` - name of your website
 
+new ones available
+
+``hideFollowTitles`` - default to false
+
+``showFollowBlock`` - default to false
+
 ### Custom style ###
 
 You can change the style of your emails by manipulating ``PrettyEmail.style`` object. See default values below:
@@ -131,6 +137,23 @@ PrettyEmail.style =
   textColor: '#606060'
   buttonColor: '#FFFFFF'
   buttonBgColor: '#007FFF'
+```
+
+new ones available
+
+```
+...
+followBlockBorder
+followBlockItemSize
+followBlockPadding
+followBlockWrapperBgColor
+buttonWrapperBgColor
+buttonWrapperPadding
+textWrapperBgColor
+footerBgColor
+footerPadding
+logoWidth
+logoMaxWidth
 ```
 
 ### Customizing Accounts emails ###
