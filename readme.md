@@ -125,7 +125,7 @@ new ones available
 
 ``hideFollowTitles`` - default to false
 
-``showFollowBlock`` - default default to false
+``showFollowBlock`` - default to false
 
 ### Custom style ###
 
