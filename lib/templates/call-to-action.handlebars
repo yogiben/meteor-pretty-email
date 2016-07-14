@@ -403,16 +403,6 @@
 												<tr>
 													<td valign="top" class="mcnTextBlockInner">
 
-														<table align="left" border="0" cellpadding="0" cellspacing="0" width="366" class="mcnTextContentContainer">
-															<tbody><tr>
-
-																<td valign="top" class="mcnTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;">
-
-																	{{{subject}}}
-																</td>
-															</tr>
-														</tbody></table>
-
 														<table align="right" border="0" cellpadding="0" cellspacing="0" width="197" class="mcnTextContentContainer">
 															<tbody><tr>
 
@@ -447,7 +437,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
                                         {{#if logoUrl}}
-                                        <img align="center" alt="" src="{{logoUrl}}" width="129" style="max-width: 258px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                                        <img align="center" alt="" src="{{logoUrl}}" width="{{style.logoWidth}}" style="max-width: {{style.logoMaxWidth}}px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
                                       {{/if}}
 
                             </td>
@@ -475,13 +465,13 @@
                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="mcnTextContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                     <tbody><tr>
 
-                        <td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;text-align: left;">
+                        <td align="center" valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;text-align: left;">
 
                             <h1 style="text-align: center;margin: 0;padding: 0;display: block;font-family: {{style.fontFamily}};font-size: 40px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -1px;color: {{style.fontColor}} !important;">{{{heading}}}</h1>
 
-<h3 style="text-align: center;margin: 0;padding: 0;display: block;font-family: {{style.fontFamily}};font-size: 18px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -.5px;color: {{style.fontColor}} !important;">{{{headingSmall}}}</h3>
+                            <h3 style="text-align: center;margin: 0;padding: 0;display: block;font-family: {{style.fontFamily}};font-size: 18px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: -.5px;color: {{style.fontColor}} !important;">{{{headingSmall}}}</h3>
 
-{{#eachLine message}}<p style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;"><span style="line-height:1.6em; text-align:left">{{{this}}}</span></p>{{/eachLine}}
+                            {{#eachLine message}}<p style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 15px;line-height: 150%;"><span style="line-height:1.6em; text-align:left">{{{this}}}</span></p>{{/eachLine}}
 
                         </td>
                     </tr>
@@ -491,9 +481,9 @@
         </tr>
     </tbody>
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-    <tbody class="mcnButtonBlockOuter">
+    <tbody style="background-color: {{style.buttonWrapperBgColor}}" class="mcnButtonBlockOuter">
         <tr>
-            <td style="padding-top: 0;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center" class="mcnButtonBlockInner">
+            <td style="padding: 18px; padding: {{style.buttonWrapperPadding}};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center" class="mcnButtonBlockInner">
                 <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid {{style.buttonBgColor}};border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: {{style.buttonBgColor}};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                     <tbody>
                         <tr>
@@ -510,7 +500,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
     <tr>
         <td valign="top" class="bodyContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-<tbody class="mcnTextBlockOuter">
+<tbody style="background-color: {{style.textWrapperBgColor}}" class="mcnTextBlockOuter">
 <tr>
 <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
@@ -537,19 +527,19 @@
                             <tr>
                                 <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                                     <!-- BEGIN FOOTER // -->
-                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF; background-color: {{style.followBlockWrapperBgColor}};border-top: 0;border-bottom: 0;">
                                         <tr>
                                         	{{#if showFollowBlock}}
-                                            <td valign="top" class="footerContainer" style="padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <td valign="top" class="footerContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
     <tbody class="mcnFollowBlockOuter">
         <tr>
-            <td align="center" valign="top" style="padding: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnFollowBlockInner">
+            <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnFollowBlockInner">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
     <tbody><tr>
         <td align="center" style="padding-left: 9px;padding-right: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContent" style="border: 1px solid #EEEEEE;background-color: #FAFAFA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContent" style="border: 1px solid #eeeeee;border: {{style.followBlockBorder}};background-color: #FAFAFA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                 <tbody><tr>
-                    <td align="center" valign="top" style="padding-top: 9px;padding-right: 9px;padding-left: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <td align="center" valign="top" style="padding: 10px;padding: {{style.followBlockPadding}};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 						<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 							<tbody><tr>
 								<td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
@@ -560,16 +550,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{facebook}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Facebook</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{facebook}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Facebook</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -585,16 +576,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{twitter}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Twitter</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{twitter}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Twitter</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -610,16 +602,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{googlePlus}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-96.png" alt="Google Plus" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{googlePlus}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-96.png" alt="Google Plus" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{googlePlus}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Google Plus</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{googlePlus}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Google Plus</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -635,16 +628,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{instagram}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-96.png" alt="Instagram" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{instagram}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-96.png" alt="Instagram" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{instagram}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Instagram</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{instagram}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Instagram</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -660,16 +654,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{pinterest}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-pinterest-96.png" alt="Pinterest" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{pinterest}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-pinterest-96.png" alt="Pinterest" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{pinterest}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Pinterest</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{pinterest}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Pinterest</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -685,16 +680,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{youtube}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-96.png" alt="YouTube" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{youtube}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-96.png" alt="YouTube" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{youtube}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">YouTube</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{youtube}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">YouTube</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -710,16 +706,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{linkedin}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-96.png" alt="LinkedIn" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{linkedin}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-96.png" alt="LinkedIn" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{linkedin}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">LinkedIn</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{linkedin}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">LinkedIn</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -735,16 +732,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{tumblr}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-tumblr-96.png" alt="Tumblr" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{tumblr}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-tumblr-96.png" alt="Tumblr" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{tumblr}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Tumblr</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{tumblr}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Tumblr</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -760,16 +758,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{website}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="{{website}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="{{website}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Website</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="{{website}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Website</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -785,16 +784,17 @@
 
 			                                    <tbody><tr>
 			                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 0;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="mailto:{{email}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-forwardtofriend-96.png" alt="Email" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+			                                            <a href="mailto:{{email}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-forwardtofriend-96.png" alt="Email" class="mcnFollowBlockIcon" width="{{style.followBlockItemSize}}" style="width: {{style.followBlockItemSize}}px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
 			                                        </td>
 			                                    </tr>
 
-
-			                                    <tr>
-			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 0;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-			                                            <a href="mailto:{{email}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Email</a>
-			                                        </td>
-			                                    </tr>
+                                          {{#unless hideFollowTitles}}
+  			                                    <tr>
+  			                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 0;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+  			                                            <a href="mailto:{{email}}" target="_blank" style="color: {{style.fontColor}};font-family: {{style.fontFamily}};font-size: 11px;font-weight: normal;line-height: 100%;text-align: justify;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Email</a>
+  			                                        </td>
+  			                                    </tr>
+                                          {{/unless}}
 
 			                                </tbody></table>
 			                                {{/if}}
@@ -820,7 +820,7 @@
         </tr>
     </tbody>
 </table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-    <tbody class="mcnTextBlockOuter">
+    <tbody style="background-color: {{style.footerBgColor}}, padding: {{style.footerPadding}}" class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
