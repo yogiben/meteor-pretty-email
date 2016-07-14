@@ -152,6 +152,8 @@ buttonWrapperPadding
 textWrapperBgColor
 footerBgColor
 footerPadding
+logoWidth
+logoMaxWidth
 ```
 
 ### Customizing Accounts emails ###
